@@ -25,7 +25,7 @@ import static dev.anvilcraft.ccb.AnvilCraftCCB.REGISTRUM;
 
 public class CCBBlocks {
     static {
-        REGISTRUM.defaultCreativeTab(CCBItemGroups.CHAPLUS_ITEMS.getKey());
+        REGISTRUM.defaultCreativeTab(CCBItemGroups.CHACHABA_ITEMS.getKey());
     }
 
     @SuppressWarnings("unused")

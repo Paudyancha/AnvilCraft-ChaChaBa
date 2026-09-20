@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "anvilcraft_chaplus:block/cha_anvil",
+      "model": "anvilcraft_chachaba:block/cha_anvil",
       "y": 90
     },
     "facing=north": {
-      "model": "anvilcraft_chaplus:block/cha_anvil"
+      "model": "anvilcraft_chachaba:block/cha_anvil"
     },
     "facing=south": {
-      "model": "anvilcraft_chaplus:block/cha_anvil",
+      "model": "anvilcraft_chachaba:block/cha_anvil",
       "y": 180
     },
     "facing=west": {
-      "model": "anvilcraft_chaplus:block/cha_anvil",
+      "model": "anvilcraft_chachaba:block/cha_anvil",
       "y": 270
     }
   }

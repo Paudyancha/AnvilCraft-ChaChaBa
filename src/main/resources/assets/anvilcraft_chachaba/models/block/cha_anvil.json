@@ -4,12 +4,12 @@
 	"parent": "block/block",
 	"render_type": "minecraft:cutout",
 	"textures": {
-		"bottom": "anvilcraft_chaplus:block/cha_anvil_bottom",
-		"bottom_top": "anvilcraft_chaplus:block/cha_anvil_bottom_top",
-		"top_bottom": "anvilcraft_chaplus:block/cha_anvil_top_bottom",
-		"top": "anvilcraft_chaplus:block/cha_anvil_top",
-		"side": "anvilcraft_chaplus:block/cha_anvil_side",
-		"particle": "anvilcraft_chaplus:block/cha_anvil"
+		"bottom": "anvilcraft_chachaba:block/cha_anvil_bottom",
+		"bottom_top": "anvilcraft_chachaba:block/cha_anvil_bottom_top",
+		"top_bottom": "anvilcraft_chachaba:block/cha_anvil_top_bottom",
+		"top": "anvilcraft_chachaba:block/cha_anvil_top",
+		"side": "anvilcraft_chachaba:block/cha_anvil_side",
+		"particle": "anvilcraft_chachaba:block/cha_anvil"
 	},
 	"elements": [
 		{

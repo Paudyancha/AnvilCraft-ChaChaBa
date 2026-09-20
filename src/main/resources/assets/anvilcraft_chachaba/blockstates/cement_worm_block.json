@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "anvilcraft_chaplus:block/cement_worm_block"
+      "model": "anvilcraft_chachaba:block/cement_worm_block"
     }
   }
 }

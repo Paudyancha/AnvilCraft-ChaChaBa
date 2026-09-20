@@ -22,7 +22,7 @@ import static dev.anvilcraft.ccb.AnvilCraftCCB.REGISTRUM;
 
 public class CCBItems {
     static {
-        REGISTRUM.defaultCreativeTab(CCBItemGroups.CHAPLUS_ITEMS.getKey());
+        REGISTRUM.defaultCreativeTab(CCBItemGroups.CHACHABA_ITEMS.getKey());
     }
 
     public static final ItemEntry<TuningFork> TUNING_FORK = REGISTRUM

@@ -1,5 +1,5 @@
 {
-	"parent": "anvilcraft_chaplus:item/tuning_fork_3d",
+	"parent": "anvilcraft_chachaba:item/tuning_fork_3d",
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [180, 0, 0],

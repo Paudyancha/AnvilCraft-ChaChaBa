@@ -20,7 +20,7 @@ import net.neoforged.neoforge.fluids.FluidType;
 public class GeneticOoze extends Fluid {
 
     public static final FluidType TYPE = new FluidType(FluidType.Properties.create()
-        .descriptionId("block.anvilcraft_chaplus.genetic_ooze_block")
+        .descriptionId("block.anvilcraft_chachaba.genetic_ooze_block")
         .density(3000)
         .viscosity(6000)
         .motionScale(0)

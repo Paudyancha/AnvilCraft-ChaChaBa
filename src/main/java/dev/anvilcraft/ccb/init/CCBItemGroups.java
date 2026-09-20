@@ -15,7 +15,7 @@ public class CCBItemGroups {
         AnvilCraftCCB.MOD_ID
     );
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CHAPLUS_ITEMS = DEFERRED_REGISTER.register(
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CHACHABA_ITEMS = DEFERRED_REGISTER.register(
         "item", () -> CreativeModeTab.builder()
             .icon(CCBItems.TUNING_FORK::asStack)
             .displayItems((ctx, entries) -> {

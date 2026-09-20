@@ -2,8 +2,8 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "anvilcraft_chaplus:item/fork",
-		"particle": "anvilcraft_chaplus:item/fork"
+		"0": "anvilcraft_chachaba:item/fork",
+		"particle": "anvilcraft_chachaba:item/fork"
 	},
 	"elements": [
 		{
