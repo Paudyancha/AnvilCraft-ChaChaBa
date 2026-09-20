@@ -14,14 +14,14 @@ import net.neoforged.fml.common.EventBusSubscriber;
 public class AnvilEventListener {
 
     @SubscribeEvent
-    public static void onLand(AnvilEvent.OnLand event){
+    public static void onLand(AnvilEvent.OnLand event) {
         Level level = event.getLevel();
         BlockPos pos = event.getPos();
         MinecraftServer server = level.getServer();
         if (null == server) return;
         final BlockPos hitBlockPos = pos.below();
         final BlockState hitBlockState = level.getBlockState(hitBlockPos);
-        if (hitBlockState.getBlock() instanceof WormBlock){
+        if (hitBlockState.getBlock() instanceof WormBlock) {
             WormBlock.landOn(level, pos.below());
         }
     }

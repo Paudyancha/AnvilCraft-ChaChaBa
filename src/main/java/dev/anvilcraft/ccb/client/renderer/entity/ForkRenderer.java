@@ -12,12 +12,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemDisplayContext;
 
-public class ForkRenderer <T extends ThrownHeavyHalberdEntity> extends EntityRenderer<T> {
+public class ForkRenderer<T extends ThrownHeavyHalberdEntity> extends EntityRenderer<T> {
 
     private final ItemRenderer itemRenderer;
 
     private static final ResourceLocation TEXTURE =
-        ResourceLocation.fromNamespaceAndPath("anvilcraft_chaplus", "textures/item/fork.png");
+        ResourceLocation.fromNamespaceAndPath("anvilcraft_chachaba", "textures/item/fork.png");
 
     public ForkRenderer(EntityRendererProvider.Context context) {
         super(context);
@@ -25,7 +25,7 @@ public class ForkRenderer <T extends ThrownHeavyHalberdEntity> extends EntityRen
     }
 
     @Override
-    public void render(T entity, float yaw, float partialTick, PoseStack pose, MultiBufferSource buffer, int light ) {
+    public void render(T entity, float yaw, float partialTick, PoseStack pose, MultiBufferSource buffer, int light) {
         pose.pushPose();
         pose.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTick, entity.yRotO, entity.getYRot()) + 90.0F));
         pose.mulPose(Axis.ZP.rotationDegrees(90.0F - Mth.lerp(partialTick, entity.xRotO, entity.getXRot())));

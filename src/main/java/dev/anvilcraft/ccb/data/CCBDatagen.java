@@ -2,9 +2,9 @@ package dev.anvilcraft.ccb.data;
 
 import dev.anvilcraft.ccb.AnvilCraftCCB;
 import dev.anvilcraft.ccb.data.lang.LangHandler;
+import dev.anvilcraft.ccb.data.recipe.RecipeHandler;
 import dev.anvilcraft.lib.v2.integration.IntegrationHook;
 import dev.anvilcraft.lib.v2.registrum.providers.ProviderType;
-import dev.anvilcraft.ccb.data.recipe.RecipeHandler;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -19,6 +19,7 @@ import static dev.anvilcraft.ccb.AnvilCraftCCB.REGISTRUM;
 
 @EventBusSubscriber(modid = AnvilCraftCCB.MOD_ID)
 public class CCBDatagen {
+    @SuppressWarnings("unused")
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
@@ -30,6 +31,7 @@ public class CCBDatagen {
     }
 
     public static void init() {
+        @SuppressWarnings("unused")
         var genInit = REGISTRUM.getDataGenInitializer();
         REGISTRUM.addDataGenerator(ProviderType.LANG, LangHandler::init);
         REGISTRUM.addDataGenerator(ProviderType.RECIPE, RecipeHandler::init);

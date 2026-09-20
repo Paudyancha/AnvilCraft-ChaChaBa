@@ -28,7 +28,7 @@ public class GeneticOozeBlock extends Block implements BucketPickup {
 
     public GeneticOozeBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.getStateDefinition().any().setValue(INFECTION,0));
+        this.registerDefaultState(this.getStateDefinition().any().setValue(INFECTION, 0));
     }
 
     @Override
@@ -68,12 +68,12 @@ public class GeneticOozeBlock extends Block implements BucketPickup {
             if (level.getBlockState(targetPos).is(BlockTags.DIRT)) blockPosList.add(targetPos);
             if (level.getBlockState(targetPos).is(CCBBlocks.GENETIC_OOZE_BLOCK)) oozePosList.add(targetPos);
         }
-        if (!blockPosList.isEmpty()){
+        if (!blockPosList.isEmpty()) {
             level.setBlockAndUpdate(blockPosList.get(random.nextInt(blockPosList.size())), CCBBlocks.GENETIC_OOZE_BLOCK.getDefaultState());
             level.setBlockAndUpdate(pos, state.setValue(INFECTION, state.getValue(INFECTION) - 1));
             return;
         }
-        if (!oozePosList.isEmpty()){
+        if (!oozePosList.isEmpty()) {
             BlockPos targetPos = oozePosList.get(random.nextInt(oozePosList.size()));
             BlockState targetState = level.getBlockState(targetPos);
             int infection = state.getValue(INFECTION);

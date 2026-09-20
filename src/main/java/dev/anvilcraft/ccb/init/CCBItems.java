@@ -34,7 +34,7 @@ public class CCBItems {
             .pattern(" RB")
             .pattern("A  ")
             .define('A', ModItems.ROYAL_STEEL_NUGGET)
-            .define('R', ModItems.ROYAL_STEEL_INGOT )
+            .define('R', ModItems.ROYAL_STEEL_INGOT)
             .define('B', Items.IRON_NUGGET)
             .unlockedBy("has_iron_nugget", RegistrumRecipeProvider.has(Items.IRON_NUGGET))
             .unlockedBy("has_royal_steel_nugget", RegistrumRecipeProvider.has(ModItems.ROYAL_STEEL_NUGGET))
@@ -44,7 +44,7 @@ public class CCBItems {
         .register();
 
     public static final ItemEntry<SolidBucketItem> GENETIC_OOZE_BUCKET = REGISTRUM
-        .item("genetic_ooze_bucket", prop-> new SolidBucketItem(CCBBlocks.GENETIC_OOZE_BLOCK.get(), SoundEvents.MUD_PLACE, prop))
+        .item("genetic_ooze_bucket", prop -> new SolidBucketItem(CCBBlocks.GENETIC_OOZE_BLOCK.get(), SoundEvents.MUD_PLACE, prop))
         .properties(prop -> {
             prop.stacksTo(1);
             return prop;

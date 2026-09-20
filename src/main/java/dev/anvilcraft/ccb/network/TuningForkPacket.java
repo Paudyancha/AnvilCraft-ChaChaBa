@@ -22,11 +22,10 @@ public  class TuningForkPacket implements IServerboundPacket {
     public static final StreamCodec<RegistryFriendlyByteBuf, TuningForkPacket> STREAM_CODEC =
         StreamCodec.ofMember(TuningForkPacket::encode, TuningForkPacket::new);
 
-
     private final BlockPos pos;
     private final InteractionHand hand;
 
-    public TuningForkPacket(BlockPos pos , InteractionHand hand) {
+    public TuningForkPacket(BlockPos pos, InteractionHand hand) {
         this.pos = pos;
         this.hand = hand;
     }
@@ -48,14 +47,14 @@ public  class TuningForkPacket implements IServerboundPacket {
 
     @Override
     public void handleOnServer(Player player) {
-        if (!(player instanceof ServerPlayer serverPlayer)) return ;
+        if (!(player instanceof ServerPlayer serverPlayer)) return;
         Level level = serverPlayer.level();
-        if (!level.isLoaded(this.pos)) return ;
+        if (!level.isLoaded(this.pos)) return;
 
         ItemStack stack = player.getItemInHand(this.hand);
         if (!(stack.getItem() instanceof TuningFork)) return;
         if (player.getCooldowns().isOnCooldown(stack.getItem())) return;
-        TuningFork.tryBreakBlock(level ,player ,stack ,this.pos);
+        TuningFork.tryBreakBlock(level, player, stack, this.pos);
 
     }
 }

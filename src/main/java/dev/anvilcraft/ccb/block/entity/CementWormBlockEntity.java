@@ -15,7 +15,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemp
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplateManager;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 
-public class CementWormBlockEntity extends WormBlockEntity{
+public class CementWormBlockEntity extends WormBlockEntity {
 
     public Sizes size = Sizes.ONE;
 
@@ -39,7 +39,7 @@ public class CementWormBlockEntity extends WormBlockEntity{
         if (worm.tank.isEmpty() || !worm.tank.getFluid().is(ModFluidTags.CEMENT)) return false;
         MinecraftServer server = level.getServer();
         if (server == null) return false;
-        if (worm.tank.getFluidAmount() < 1000 << size ) return false;
+        if (worm.tank.getFluidAmount() < 1000 << size) return false;
         StructureTemplateManager manager = server.getStructureManager();
         ResourceLocation id = AnvilCraftCCB.of("plat0");
         StructureTemplate template = manager.get(id).orElse(null);
@@ -49,7 +49,7 @@ public class CementWormBlockEntity extends WormBlockEntity{
         if (worm.tank.isEmpty()) return false;
         StructurePlaceSettings settings = new StructurePlaceSettings();
         worm.tank.drain(1000 << size, IFluidHandler.FluidAction.EXECUTE);
-        return template.placeInWorld((ServerLevelAccessor) level, posO, posO, settings,level.getRandom(), 3);
+        return template.placeInWorld((ServerLevelAccessor) level, posO, posO, settings, level.getRandom(), 3);
     }
 
     public enum Sizes {
@@ -60,10 +60,11 @@ public class CementWormBlockEntity extends WormBlockEntity{
         public final int size;
 
         Sizes(int i) {
-            if (i > 0 || i < 2 )
+            if (i >= 0 && i <= 2) {
                 this.size = i;
-            else
+            } else {
                 this.size = 0;
+            }
         }
     }
 }

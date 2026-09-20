@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
 
 public class ProceduralProcessRecipeLoader {
-    public static void init(RegistrumRecipeProvider provider){
+    public static void init(RegistrumRecipeProvider provider) {
         ProceduralProcessRecipeBuilder.of(CCBBlocks.GENETIC_OOZE_BLOCK.get())
             .addStep(
                 BlockCompressRecipe.builder()

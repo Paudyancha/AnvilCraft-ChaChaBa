@@ -9,14 +9,14 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.network.PacketDistributor;
 
-@EventBusSubscriber(modid = AnvilCraftCCB.MOD_ID ,value = Dist.CLIENT)
+@EventBusSubscriber(modid = AnvilCraftCCB.MOD_ID, value = Dist.CLIENT)
 public class TuningForkClientEventListener {
     private TuningForkClientEventListener() {}
 
     @SubscribeEvent
-    public static void breakBlock(PlayerInteractEvent.LeftClickBlock event){
+    public static void breakBlock(PlayerInteractEvent.LeftClickBlock event) {
         if (!(event.getItemStack().getItem() instanceof TuningFork)) return;
-        PacketDistributor.sendToServer(new TuningForkPacket(event.getPos(),event.getHand()));
+        PacketDistributor.sendToServer(new TuningForkPacket(event.getPos(), event.getHand()));
         event.setCanceled(true);
     }
 
