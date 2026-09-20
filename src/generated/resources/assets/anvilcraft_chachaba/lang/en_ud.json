@@ -1,0 +1,20 @@
+{
+  "anvilcraft_chachaba.configuration.max_effective_height": "ʇɥᵷᴉǝH ǝʌᴉʇɔǝɟɟƎ xɐW",
+  "anvilcraft_chachaba.configuration.max_effective_height.tooltip": "ꞁᴉʌuⱯ ɐɥƆ ɟo ʇɥᵷᴉǝɥ ɯnɯᴉxɐɯ ǝʌᴉʇɔǝɟɟƎ",
+  "anvilcraft_chachaba.configuration.section.anvilcraft.chachaba.server.toml": "uoᴉʇɐɹnᵷᴉɟuoƆ ɹǝʌɹǝS ɐqɐɥɔɐɥƆ ʇɟɐɹɔꞁᴉʌuⱯ",
+  "anvilcraft_chachaba.configuration.section.anvilcraft.chachaba.server.toml.title": "uoᴉʇɐɹnᵷᴉɟuoƆ ɹǝʌɹǝS ɐqɐɥɔɐɥƆ ʇɟɐɹɔꞁᴉʌuⱯ",
+  "anvilcraft_chachaba.configuration.throw_threshold_time": "ǝɯᴉ⟘ pꞁoɥsǝɹɥ⟘ ʍoɹɥ⟘",
+  "anvilcraft_chachaba.configuration.throw_threshold_time.tooltip": "ǝɯᴉʇ pꞁoɥsǝɹɥʇ ʍoɹɥʇ ʞɹoɟ ᵷuᴉun⟘",
+  "anvilcraft_chachaba.configuration.title": "uoᴉʇɐɹnᵷᴉɟuoƆ ɐqɐɥɔɐɥƆ ʇɟɐɹɔꞁᴉʌuⱯ",
+  "block.anvilcraft_chachaba.cement_worm_block": "ɯɹoM ʇuǝɯǝƆ",
+  "block.anvilcraft_chachaba.cha_anvil": "ꞁᴉʌuⱯ ɐɥƆ",
+  "block.anvilcraft_chachaba.genetic_ooze_block": "ǝzoO ɔᴉʇǝuǝ⅁",
+  "block.anvilcraft_chachaba.genetic_ooze_cauldron": "uoɹpꞁnɐƆ ǝzoO ɔᴉʇǝuǝ⅁",
+  "entity.anvilcraft_chachaba.thrown_fork": "ʞɹoℲ uʍoɹɥ⟘",
+  "item.anvilcraft_chachaba.genetic_ooze_bucket": "ʇǝʞɔnᗺ ǝzoO ɔᴉʇǝuǝ⅁",
+  "item.anvilcraft_chachaba.mush_bar": "ɹɐᗺ ɥsnW",
+  "item.anvilcraft_chachaba.mush_bar_bowl": "ꞁʍoᗺ ɹɐᗺ ɥsnW",
+  "item.anvilcraft_chachaba.mush_fry": "ʎɹℲ ɥsnW",
+  "item.anvilcraft_chachaba.tuning_fork": "ʞɹoℲ ᵷuᴉun⟘",
+  "itemGroup.anvilcraft_chachaba.addon_items": "ɐᗺɐɥƆɐɥƆ :ʇɟɐɹƆꞁᴉʌuⱯ"
+}

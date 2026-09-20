@@ -1,0 +1,20 @@
+{
+  "anvilcraft_chachaba.configuration.max_effective_height": "Max Effective Height",
+  "anvilcraft_chachaba.configuration.max_effective_height.tooltip": "Effective maximum height of Cha Anvil",
+  "anvilcraft_chachaba.configuration.section.anvilcraft.chachaba.server.toml": "Anvilcraft Chachaba Server Configuration",
+  "anvilcraft_chachaba.configuration.section.anvilcraft.chachaba.server.toml.title": "Anvilcraft Chachaba Server Configuration",
+  "anvilcraft_chachaba.configuration.throw_threshold_time": "Throw Threshold Time",
+  "anvilcraft_chachaba.configuration.throw_threshold_time.tooltip": "Tuning fork throw threshold time",
+  "anvilcraft_chachaba.configuration.title": "Anvilcraft Chachaba Configuration",
+  "block.anvilcraft_chachaba.cement_worm_block": "Cement Worm",
+  "block.anvilcraft_chachaba.cha_anvil": "Cha Anvil",
+  "block.anvilcraft_chachaba.genetic_ooze_block": "Genetic Ooze",
+  "block.anvilcraft_chachaba.genetic_ooze_cauldron": "Genetic Ooze Cauldron",
+  "entity.anvilcraft_chachaba.thrown_fork": "Thrown Fork",
+  "item.anvilcraft_chachaba.genetic_ooze_bucket": "Genetic Ooze Bucket",
+  "item.anvilcraft_chachaba.mush_bar": "Mush Bar",
+  "item.anvilcraft_chachaba.mush_bar_bowl": "Mush Bar Bowl",
+  "item.anvilcraft_chachaba.mush_fry": "Mush Fry",
+  "item.anvilcraft_chachaba.tuning_fork": "Tuning Fork",
+  "itemGroup.anvilcraft_chachaba.addon_items": "AnvilCraft: ChaChaBa"
+}
