@@ -21,7 +21,7 @@ public class CCBFluids {
         "genetic_ooze", () -> GeneticOoze.TYPE
     );
 
-    public static final DeferredHolder<Fluid,GeneticOoze> GENETIC_OOZE = FLUIDS.register(
+    public static final DeferredHolder<Fluid, GeneticOoze> GENETIC_OOZE = FLUIDS.register(
         "genetic_ooze", GeneticOoze::new
     );
 

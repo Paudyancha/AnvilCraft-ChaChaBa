@@ -26,11 +26,10 @@ import javax.annotation.Nullable;
 public class ThrownForkEntity extends ThrownHeavyHalberdEntity {
     private ItemStack itemStack = ItemStack.EMPTY;
 
-
-
     public void setForkStack(ItemStack itemStack) {
-        if(itemStack.isEmpty()||itemStack.getMaxDamage() - itemStack.getDamageValue() <0)
+        if (itemStack.isEmpty() || itemStack.getMaxDamage() - itemStack.getDamageValue() < 0) {
             return;
+        }
         setPickupItemStack(itemStack);
     }
 
@@ -63,15 +62,16 @@ public class ThrownForkEntity extends ThrownHeavyHalberdEntity {
             double baseDamage = this.getBaseDamage();
             float damage = Mth.ceil(Mth.clamp(speed * baseDamage, 0.0, 2.147483647E9));
             if (result.getEntity() instanceof LivingEntity livingEntity) {
-                if(damage > livingEntity.getHealth()) {
+                if (damage > livingEntity.getHealth()) {
                     livingEntity.addEffect(new MobEffectInstance(new MobEffectInstance(MobEffects.WEAKNESS, 5 * 20)));
-                }else{
+                } else {
                     super.onHitEntity(result);
                 }
-                if (itemStack.getItem() instanceof ResinBlockItem&&!this.itemStack.isEmpty()&&player!=null&&livingEntity.getHealth()>0) {
+                if (itemStack.getItem() instanceof ResinBlockItem && !this.itemStack.isEmpty() && player != null
+                    && livingEntity.getHealth() > 0) {
                     try {
-                        Method method = itemStack.getItem().getClass().getMethod("useEntity",Player.class,Entity.class,ItemStack.class);
-                        method.invoke(null,player,result.getEntity(),itemStack);
+                        Method method = itemStack.getItem().getClass().getMethod("useEntity", Player.class, Entity.class, ItemStack.class);
+                        method.invoke(null, player, result.getEntity(), itemStack);
                     } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
                         throw new RuntimeException(e);
                     }
@@ -84,7 +84,7 @@ public class ThrownForkEntity extends ThrownHeavyHalberdEntity {
         }
     }
 
-    private  void dropItem( ItemStack itemStack) {
+    private void dropItem(ItemStack itemStack) {
         if (itemStack.isEmpty()) return;
         this.spawnAtLocation(itemStack);
         this.itemStack = ItemStack.EMPTY;
@@ -94,13 +94,13 @@ public class ThrownForkEntity extends ThrownHeavyHalberdEntity {
     protected void onHitBlock(BlockHitResult result) {
 
         if  (!this.level().isClientSide()) {
-            if (!itemStack.isEmpty() && player!=null){
-                UseOnContext context = new UseOnContext(this.level(),player, InteractionHand.MAIN_HAND, itemStack, result);
+            if (!itemStack.isEmpty() && player != null) {
+                UseOnContext context = new UseOnContext(this.level(), player, InteractionHand.MAIN_HAND, itemStack, result);
                 if (itemStack.getItem() instanceof ResinBlockItem resinBlockItem) {
-                    if (  ResinBlockItem.hasMob(itemStack)) {
+                    if (ResinBlockItem.hasMob(itemStack)) {
                         resinBlockItem.useOn(context);
                     }
-                }else if (itemStack.getItem() instanceof TopazItem topazItem) {
+                } else if (itemStack.getItem() instanceof TopazItem topazItem) {
                     topazItem.useOn(context);
                 }
                 dropItem(this.itemStack);

@@ -30,9 +30,9 @@ public class CCBBlocks {
 
     @SuppressWarnings("unused")
     public static BlockEntry<ChaAnvilBlock> CHA_ANVIL = REGISTRUM
-        .block("cha_anvil",ChaAnvilBlock::new)
+        .block("cha_anvil", ChaAnvilBlock::new)
         .blockstate(DataGenUtil::noExtraModelOrState)
-        .initialProperties(()-> Blocks.SPRUCE_PLANKS)
+        .initialProperties(() -> Blocks.SPRUCE_PLANKS)
         .simpleItem()
         .recipe((ctx, provider) -> ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ctx.get())
             .pattern("AAA")
@@ -46,10 +46,10 @@ public class CCBBlocks {
         .register();
 
     public static BlockEntry<GeneticOozeBlock> GENETIC_OOZE_BLOCK = REGISTRUM
-        .block("genetic_ooze_block",GeneticOozeBlock::new)
+        .block("genetic_ooze_block", GeneticOozeBlock::new)
         .lang("Genetic Ooze")
         .simpleItem()
-        .initialProperties(()-> Blocks.MUD)
+        .initialProperties(() -> Blocks.MUD)
         .properties(BlockBehaviour.Properties::noLootTable)
         .blockstate((ctx, provider) -> provider.simpleBlock(ctx.getEntry()))
         .register();
@@ -67,7 +67,7 @@ public class CCBBlocks {
     public static final BlockEntry<CementWormBlock>  CEMENT_WORM_BLOCK = REGISTRUM
         .block("cement_worm_block", CementWormBlock::new)
         .lang("Cement Worm")
-        .initialProperties(()-> Blocks.MUD)
+        .initialProperties(() -> Blocks.MUD)
         .properties(BlockBehaviour.Properties::noOcclusion)
         .blockstate(DataGenUtil::noExtraModelOrState)
         .item(WormBlockItem::new)

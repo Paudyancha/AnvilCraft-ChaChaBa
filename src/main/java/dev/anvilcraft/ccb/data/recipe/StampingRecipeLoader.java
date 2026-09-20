@@ -10,6 +10,6 @@ public class StampingRecipeLoader {
         StampingRecipe.builder()
             .requires(CCBItems.MUSH_BAR_BOWL)
             .result(CCBItems.MUSH_BAR)
-            .save(provider , AnvilCraftCCB.of("stamping/mush_bar"));
+            .save(provider, AnvilCraftCCB.of("stamping/mush_bar"));
     }
 }

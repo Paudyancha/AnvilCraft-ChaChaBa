@@ -16,7 +16,7 @@ public class CCBBlockEntities {
         .register();
 
     public static final BlockEntityEntry<CementWormBlockEntity> CEMENT_WORM_BLOCK_BLOCK_ENTITY = REGISTRUM
-        .blockEntity("cement_worm",CementWormBlockEntity::new)
+        .blockEntity("cement_worm", CementWormBlockEntity::new)
         .validBlock(CCBBlocks.CEMENT_WORM_BLOCK)
         .renderer(() -> WormBlockEntityRenderer::new)
         .register();

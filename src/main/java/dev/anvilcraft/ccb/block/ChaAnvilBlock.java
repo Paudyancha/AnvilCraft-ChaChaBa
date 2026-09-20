@@ -33,7 +33,7 @@ public class ChaAnvilBlock extends BetterAnvilBlock implements IHammerRemovable 
 
     public ChaAnvilBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.getStateDefinition().any().setValue(HAS_EATEN_MELON,false));
+        this.registerDefaultState(this.getStateDefinition().any().setValue(HAS_EATEN_MELON, false));
     }
 
     @Override
@@ -56,10 +56,12 @@ public class ChaAnvilBlock extends BetterAnvilBlock implements IHammerRemovable 
             Block belowBlock = level.getBlockState(pos.below()).getBlock();
 
             if (level.getBlockState(belowPos).getBlock() == Blocks.MELON) {
-                if (level.destroyBlock(belowPos, false))
-                    level.setBlockAndUpdate(pos, state.setValue(HAS_EATEN_MELON , true));
-            }else  if(state.getValue(HAS_EATEN_MELON))
-                level.setBlockAndUpdate(pos, state.setValue(HAS_EATEN_MELON,damageDropped(level , belowPos , belowBlock)));
+                if (level.destroyBlock(belowPos, false)) {
+                    level.setBlockAndUpdate(pos, state.setValue(HAS_EATEN_MELON, true));
+                }
+            } else if (state.getValue(HAS_EATEN_MELON)) {
+                level.setBlockAndUpdate(pos, state.setValue(HAS_EATEN_MELON, damageDropped(level, belowPos, belowBlock)));
+            }
         }
         super.onLand(level, pos, state, replaceableState, fallingBlock);
     }
@@ -76,15 +78,15 @@ public class ChaAnvilBlock extends BetterAnvilBlock implements IHammerRemovable 
     }
 
     // 这个方法用于破坏方块
-    private boolean damageDropped(Level level , BlockPos belowPos ,Block belowBlock) {
+    private boolean damageDropped(Level level, BlockPos belowPos, Block belowBlock) {
         if (belowPos.getY() > AnvilCraftCCB.CONFIG.maxEffectiveHeight) return true;
         if (belowBlock == Blocks.BEDROCK) {
-            level.setBlockAndUpdate(belowPos,ModBlocks.STURDY_DEEPSLATE.getDefaultState());
+            level.setBlockAndUpdate(belowPos, ModBlocks.STURDY_DEEPSLATE.getDefaultState());
         } else if (belowBlock == ModBlocks.STURDY_DEEPSLATE.get()) {
-            level.setBlockAndUpdate(belowPos,Blocks.DEEPSLATE.defaultBlockState());
-        }else if (level.getBlockState(belowPos).is(Tags.Blocks.STONES)) {
+            level.setBlockAndUpdate(belowPos, Blocks.DEEPSLATE.defaultBlockState());
+        } else if (level.getBlockState(belowPos).is(Tags.Blocks.STONES)) {
             level.destroyBlock(belowPos, false);
-        }else {
+        } else {
             return true;
         }
         return false;

@@ -81,7 +81,7 @@ public class WormBlock extends Block implements EntityBlock, IHammerRemovable, I
 
     public static void landOn(Level level, BlockPos pos) {
         if (level.isClientSide) return;
-        if (level.getBlockEntity(pos)  instanceof WormBlockEntity worm ) {
+        if (level.getBlockEntity(pos) instanceof WormBlockEntity worm) {
             worm.landOn(level, pos, worm);
         }
     }

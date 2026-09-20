@@ -93,7 +93,7 @@ public class WormBlockEntity extends BlockEntity implements IFluidHandlerHolder 
     }
 
     public boolean onPlayerUse(Player player, InteractionHand hand) {
-        //noinspection PointlessNullCheck
+        // noinspection PointlessNullCheck
         if (this.level != null
             && FluidHandlerWrapper.tryInteractWithBottle(player, hand, this.tank, this.level, this.getBlockPos())) {
             return true;
@@ -107,6 +107,6 @@ public class WormBlockEntity extends BlockEntity implements IFluidHandlerHolder 
     }
 
     public void landOn(Level level, BlockPos pos, WormBlockEntity worm) {
-        worm.hitNum +=1;
+        worm.hitNum += 1;
     }
 }

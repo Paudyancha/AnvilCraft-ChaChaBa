@@ -16,6 +16,6 @@ public class FastCookingRecipeLoader {
             .requires(Tags.Items.FOODS)
             .requires(Items.BOWL)
             .result(CCBItems.MUSH_BAR_BOWL)
-            .save(provider , AnvilCraftCCB.of("fast_cooking/mush_bar_bowl"));
+            .save(provider, AnvilCraftCCB.of("fast_cooking/mush_bar_bowl"));
     }
 }
