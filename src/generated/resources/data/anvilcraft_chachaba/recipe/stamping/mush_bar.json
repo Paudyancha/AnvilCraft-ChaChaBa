@@ -1,0 +1,13 @@
+{
+  "type": "anvilcraft:stamping",
+  "ingredients": [
+    {
+      "items": "anvilcraft_chachaba:mush_bar_bowl"
+    }
+  ],
+  "results": [
+    {
+      "id": "anvilcraft_chachaba:mush_bar"
+    }
+  ]
+}
